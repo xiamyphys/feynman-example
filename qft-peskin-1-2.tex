@@ -1,0 +1,12 @@
+\documentclass{standalone}
+\usepackage[compat=1.1.0]{tikz-feynman}
+\usepackage[lite]{mtpro2}
+\begin{document}
+\feynmandiagram [large, vertical=b to d]
+{
+    a [particle=$\mu^+$] -- [fermion, reversed momentum=$k'$] b -- [fermion, momentum=$k$] c [particle=$\mu^-$],
+    b -- [photon, reversed momentum={$q=p+p'=k+k'$}] d,
+    e [particle=$e^+$] -- [anti fermion, momentum'=$p'$] d -- [anti fermion, reversed momentum'=$p$] f [particle=$e^-$];
+};
+
+\end{document}

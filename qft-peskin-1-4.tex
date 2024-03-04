@@ -1,0 +1,23 @@
+\documentclass{standalone}
+\usepackage[compat=1.1.0]{tikz-feynman}
+\usepackage[lite]{mtpro2}
+\begin{document}
+\feynmandiagram [vertical=b to d]
+{
+    a -- [fermion] b -- [fermion] c ,
+    b -- [photon] d,
+    d -- [fermion, half left] e
+      -- [fermion, half left] d,
+    e -- [photon] f,
+    g -- [fermion] f -- [fermion] i;
+};
+
+\feynmandiagram [vertical=b to d]
+{
+    a -- [anti fermion] b -- [anti fermion] c,
+    a -- [photon] c,
+    b -- [photon] d,
+    e -- [anti fermion] d -- [anti fermion] f
+};
+
+\end{document}
